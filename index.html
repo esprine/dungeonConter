@@ -11,8 +11,10 @@
         // API를 호출하여 데이터를 가져오는 함수
         function fetchServerList() {
             const xhr = new XMLHttpRequest();
-            xhr.open('GET', apiUrl, true);
-
+            xhr.open('POST', apiUrl, true);
+            
+            xhr.setRequestHeader("Access-Control-Allow-Origin", "https://api.neople.co.kr/");
+            
             xhr.onload = function () {
                 if (xhr.status === 200) {
                     alert(xhr.responseText);
