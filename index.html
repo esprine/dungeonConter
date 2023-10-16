@@ -11,12 +11,11 @@
         // API를 호출하여 데이터를 가져오는 함수
         function fetchServerList() {
             const xhr = new XMLHttpRequest();
-            xhr.open('POST', apiUrl, true);
+            alert("1");
+            xhr.setRequestHeader("Access-Control-Allow-Origin", "https://esprine.github.io");
+            xhr.open('GET', apiUrl, true);
             
             xhr.onload = function () {
-                alert("1");
-                xhr.setResponseHeader("Access-Control-Allow-Origin", "https://esprine.github.io");
-                
                 if (xhr.status === 200) {
                     alert(xhr.responseText);
                     const data = JSON.parse(xhr.responseText);
