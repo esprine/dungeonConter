@@ -11,9 +11,9 @@
         // API를 호출하여 데이터를 가져오는 함수
         function fetchServerList() {
             const xhr = new XMLHttpRequest();
-            alert("1");
-            xhr.setRequestHeader("Access-Control-Allow-Origin", "https://esprine.github.io");
+            alert("2");
             xhr.open('GET', apiUrl, true);
+            xhr.setRequestHeader("Access-Control-Allow-Origin", "https://esprine.github.io");
             
             xhr.onload = function () {
                 if (xhr.status === 200) {
