@@ -13,9 +13,9 @@
             const xhr = new XMLHttpRequest();
             xhr.open('POST', apiUrl, true);
             
-            xhr.setRequestHeader("Access-Control-Allow-Origin", "https://api.neople.co.kr/");
-            
             xhr.onload = function () {
+                xhr.setResponseHeader("Access-Control-Allow-Origin", "https://esprine.github.io");
+                
                 if (xhr.status === 200) {
                     alert(xhr.responseText);
                     const data = JSON.parse(xhr.responseText);
