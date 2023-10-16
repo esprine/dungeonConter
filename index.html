@@ -13,7 +13,7 @@
             const xhr = new XMLHttpRequest();
             alert("2");
             xhr.open('GET', apiUrl, true);
-            xhr.setRequestHeader("Access-Control-Allow-Origin", "https://esprine.github.io");
+            xhr.setRequestHeader("Access-Control-Allow-Origin", "*");
             
             xhr.onload = function () {
                 if (xhr.status === 200) {
