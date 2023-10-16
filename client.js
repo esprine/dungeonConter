@@ -1,5 +1,5 @@
-import express from 'express';
-import axios from 'axios';
+const express = require('express');
+const axios = require('axios');
 
 // CORS 미들웨어 설정
 app.use((req, res, next) => {
